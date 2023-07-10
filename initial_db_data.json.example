@@ -1,0 +1,27 @@
+{
+  "options": [{
+      "name": "DEFAULT_POINTS",
+      "value": 5,
+      "data_type": "int"
+    },
+    "options": [{
+      "name": "AUTHOR_TE_ID",
+      "value": 000000,
+      "data_type": "int"
+    }],
+    "users": [{
+        "username": "beshralghalil",
+        "is_admin": true,
+        "is_registered": true,
+        "telegram_id": 0000000,
+        "full_name": "Beshr Alghalil",
+        "points": 10000
+      },
+      {
+        "username": "someuser",
+        "is_blocked": true,
+        "telegram_id": 1111111,
+        "full_name": "Some User",
+      }
+    ]
+  }

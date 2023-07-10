@@ -1,0 +1,47 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "stitchtoongram"
+version = "0.1.0"
+authors = [
+  { name="Beshr Alghalil", email="beshrghalil@protonmail.com" },
+]
+description = "Telegram bot for stitchtoon"
+readme = "README.md"
+requires-python = ">=3.8"
+keywords = ["manga", "webtoon", "stitch", "slice", "combin", "telegram"]
+dependencies = [
+    'stitchtoon',
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/BishrGhalil/stitchtoongram"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "flake8",
+    "isort",
+]
+test = [
+    "pytest",
+]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+ensure_newline_before_comments = true
+line_length = 120
+
+[tool.pylint.format]
+max-line-length = "120"
