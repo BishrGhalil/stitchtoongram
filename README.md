@@ -31,7 +31,7 @@ pipenv shell
       "value": 5,
       "data_type": "int"
     },
-    "options": [{
+    {
       "name": "AUTHOR_TE_ID",
       "value": 00000000,
       "data_type": "int"
