@@ -71,13 +71,14 @@ def init_argparser():
 
 
 def make_required_dirs():
-    os.makedirs(TMP_DIRNAME, exist_ok=True)
-    os.makedirs(UPLOADS_DIRNAME, exist_ok=True)
+    for _dir in (TMP_DIRNAME, UPLOADS_DIRNAME):
+        os.makedirs(_dir, exist_ok=True)
 
 
 if __name__ == "__main__":
     SECRETS = load_secrets()
     commit_initial_data()
+    make_required_dirs()
     args = init_argparser()
 
     if args.shell:

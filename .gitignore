@@ -4,3 +4,7 @@ stitchtoongram.db
 *.ipynb
 
 uploads/
+
+initial_db_data.json
+
+secrets.json
