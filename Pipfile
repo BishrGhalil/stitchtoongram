@@ -7,6 +7,7 @@ name = "pypi"
 stitchtoon = {editable = true, path = "./../stitchtoon"}
 python-telegram-bot = "*"
 sqlalchemy = "*"
+gdown = "*"
 
 [dev-packages]
 
