@@ -9,6 +9,7 @@ from .admin_commands import give_points
 from .admin_commands import list_options
 from .admin_commands import list_users
 from .admin_commands import reset_reports
+from .admin_commands import send_all
 from .admin_commands import unblock
 from .admin_commands import update_option
 from .admin_commands import user_info
@@ -36,6 +37,7 @@ COMMANDS_HANDLERS = (
     CommandHandler("report", report),
     CommandHandler("request_points", request_points),
     CommandHandler("reset_reports", reset_reports),
+    CommandHandler("send_all", send_all),
     CommandHandler("start", start),
     CommandHandler("unblock", unblock),
     CommandHandler("update_option", update_option),

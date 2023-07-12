@@ -1,4 +1,8 @@
+import re
+
 from telegram import Update
+
+from ..const import PARSE_MODE
 
 
 def formmatter(text, update: Update = None):
@@ -16,3 +20,23 @@ def formmatter(text, update: Update = None):
         text = text.replace(fm[0], str(fm[1]))
 
     return text
+
+
+def args_parser(message):
+    message = re.sub(f"/[a-zA-Z_]*", "", message).strip().replace("\\", "")
+    args = re.findall(r'"[^"]*"|\S+', message)
+    args = [s.strip('"') for s in args]
+
+    return args
+
+
+async def send_message(
+    context, update, chat_id, msg, parse_mode=PARSE_MODE, notify=True
+):
+    return await context.bot.send_message(
+        chat_id=chat_id,
+        text=formmatter(msg, update),
+        disable_web_page_preview=True,
+        parse_mode=parse_mode,
+        disable_notification=not notify,
+    )

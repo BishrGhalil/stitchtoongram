@@ -31,7 +31,7 @@ admin_help_msg_text = """<b>Admin Help</b>
 /user_info - get user information.
 """
 
-admin_required_msg = """<b>Failed:</b> This command requires admin role."""
+admin_required_msg = """<b>Faild:</b> Unknown command"""
 register_required_msg = """<b>Failed:</b> You are not registered."""
 notblocked_required_msg = """<b>Failed:</b> You are blocked from using this bot."""
 
